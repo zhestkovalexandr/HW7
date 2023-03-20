@@ -44,57 +44,57 @@ m = 3, n = 4.
 8 4 2 4
 1 7 -> элемента с такими индексами в массиве нет*/
 
-int[,] Create2drandomArray(int rows, int columns, int MinValue, int MaxValue)
-{
+// int[,] Create2drandomArray(int rows, int columns, int MinValue, int MaxValue)
+// {
 
-    int[,] array = new int[rows, columns];
-    for (int i = 0; i < rows; i++)
-    {
-        for (int j = 0; j < columns; j++)
-        {
-            array[i, j] = new Random().Next(MinValue, MaxValue + 1);
-        }
-    }
-    return array;
-}
-void Show2dArray(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            Console.Write(array[i, j] + "\t");
-        }
-        Console.WriteLine();
-    }
-    Console.WriteLine();
-}
-void ElementDetector(int[,] array, int rows, int columns, int numOfRow, int numOfColumn)
-{
-    if (numOfRow <= rows && numOfRow >= 0
-    && numOfColumn <= columns && numOfColumn >= 0)
-        Console.WriteLine($"the value of this element is {array[numOfRow, numOfColumn]}");
-    else 
-    Console.WriteLine("There is no element");
-}
-Console.Write("Please input number of rows ");
-int rows = Convert.ToInt32(Console.ReadLine());
-Console.Write("Please input number of columns ");
-int columns = Convert.ToInt32(Console.ReadLine());
-Console.Write("Please input number of MinValue ");
-int MinValue = Convert.ToInt32(Console.ReadLine());
-Console.Write("Please input number of MaxValue ");
-int MaxValue = Convert.ToInt32(Console.ReadLine());
+//     int[,] array = new int[rows, columns];
+//     for (int i = 0; i < rows; i++)
+//     {
+//         for (int j = 0; j < columns; j++)
+//         {
+//             array[i, j] = new Random().Next(MinValue, MaxValue + 1);
+//         }
+//     }
+//     return array;
+// }
+// void Show2dArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + "\t");
+//         }
+//         Console.WriteLine();
+//     }
+//     Console.WriteLine();
+// }
+// void ElementDetector(int[,] array, int rows, int columns, int numOfRow, int numOfColumn)
+// {
+//     if (numOfRow <= rows && numOfRow >= 0
+//     && numOfColumn <= columns && numOfColumn >= 0)
+//         Console.WriteLine($"the value of this element is {array[numOfRow, numOfColumn]}");
+//     else 
+//     Console.WriteLine("There is no element");
+// }
+// Console.Write("Please input number of rows ");
+// int rows = int.Parse(Console.ReadLine() ?? "");
+// Console.Write("Please input number of columns ");
+// int columns = int.Parse(Console.ReadLine() ?? "");
+// Console.Write("Please input number of MinValue ");
+// int MinValue = int.Parse(Console.ReadLine() ?? "");
+// Console.Write("Please input number of MaxValue ");
+// int MaxValue = int.Parse(Console.ReadLine() ?? "");
 
-int[,] Array = Create2drandomArray(rows, columns, MinValue, MaxValue);
-Show2dArray(Array);
+// int[,] Array = Create2drandomArray(rows, columns, MinValue, MaxValue);
+// Show2dArray(Array);
 
-Console.WriteLine("Please enter the row number you need ");
-int numOfRow = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Please enter the column number you need ");
-int numOfColumn = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Please enter the row number you need ");
+// int numOfRow = int.Parse(Console.ReadLine() ?? "");
+// Console.WriteLine("Please enter the column number you need ");
+// int numOfColumn = int.Parse(Console.ReadLine() ?? "");
 
-ElementDetector(Array, rows, columns, numOfRow, numOfColumn);
+// ElementDetector(Array, rows, columns, numOfRow, numOfColumn);
 
 /*Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
 Например, задан массив:
@@ -106,13 +106,13 @@ ElementDetector(Array, rows, columns, numOfRow, numOfColumn);
 // int[,] CreateRandom2dArray()
 // {
 //     Console.WriteLine("Please input array rows: ");
-//     int rows = Convert.ToInt32(Console.ReadLine());
+//     int rows = int.Parse(Console.ReadLine() ?? "");
 //     Console.WriteLine("Please input array columns: ");
-//     int columns = Convert.ToInt32(Console.ReadLine());
+//     int columns = int.Parse(Console.ReadLine() ?? "");
 //     Console.WriteLine("Please input array minValue: ");
-//     int minValue = Convert.ToInt32(Console.ReadLine());
+//     int minValue = int.Parse(Console.ReadLine() ?? "");
 //     Console.WriteLine("Please input array maxValue: ");
-//     int maxValue = Convert.ToInt32(Console.ReadLine());
+//     int maxValue = int.Parse(Console.ReadLine() ?? "");
 //     int[,] array = new int[rows, columns];
 //     for (int i = 0; i < rows; i++)
 //     {
@@ -163,6 +163,4 @@ ElementDetector(Array, rows, columns, numOfRow, numOfColumn);
 // double[] arryaArith = ArithmeticAvg2dArrayColumns(arrayTest);
 // Console.WriteLine("Here is arithmetic average of each column of array above: ");
 // DoubleArrayToConsole(arryaArith);
-
-
 
